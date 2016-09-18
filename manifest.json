@@ -1,0 +1,23 @@
+{
+	"name": "青葉の活動写真",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"content_security_policy": "script-src 'self'; object-src 'self'",
+	"description": "艦隊これくしょん～艦これ～ でプレイ画面の動画キャプチャーを取得",
+	"icons": {
+		"128": "icon/icon128.png",
+		"48":  "icon/icon48.png",
+		"16":  "icon/icon16.png"
+	},
+	"options_page": "options.html",
+	"browser_action": {
+		"default_title": "青葉の活動写真",
+		"default_icon":  {
+			"38":  "icon/icon38.png"
+		}
+	},
+	"background": {
+		"scripts": ["const.js", "logic/MyCapture.js", "background.js"]
+	},
+	"permissions": ["background", "management", "tabs", "tabCapture", "downloads", "downloads.shelf", "alarms", "storage", "<all_urls>"]
+}

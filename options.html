@@ -1,0 +1,47 @@
+<!doctype>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>青葉の活動写真</title>
+        <link rel="stylesheet" type="text/css" href="options.css">
+        <script src="lib/jquery-3.1.0.min.js"></script>
+        <script src="lib/Varlink.js"></script>
+        <script src="const.js"></script>
+        <script src="options.js"></script>
+    </head>
+    <body>
+        <form>
+            <h2>保存ファイル名</h2>
+            <div class="leftMargin bottomMargin">
+                <input type="text" name="defaultFileName" data-varlink="defaultFileName">.webm
+                <br><br>
+                ※以下の文字は置換されます。<br>
+                <table>
+                    <tbody>
+                        <tr><td>YYYY</td><td> → </td><td>現在時刻の西暦4桁</td><td>&nbsp;</td><td>hh</td><td> → </td><td>現在時刻の時</td></tr>
+                        <tr><td>YY</td><td> → </td><td>現在時刻の西暦2桁</td><td>&nbsp;</td><td>mm</td><td> → </td><td>現在時刻の分</td></tr>
+                        <tr><td>MM</td><td> → </td><td>現在時刻の月</td><td>&nbsp;</td><td>ss</td><td> → </td><td>現在時刻の秒</td></tr>
+                        <tr><td>DD</td><td> → </td><td colspan="5">現在時刻の日</td></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                    </tbody>
+                </table>
+            </div>
+            <h2>フレームレート</h2>
+            <div class="leftMargin bottomMargin">
+                <select name="frameRate" data-varlink="frameRate">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="60">60</option>
+                </select>fps ※キャプチャ中の場合、変更の反映はゲーム画面のリロード後となります。<br>
+            </div>
+            <div class="leftMargin bottomMargin">
+                <a href="#" id="save">保　存</a>
+            </div>
+        </form>
+    </body>
+</html>
