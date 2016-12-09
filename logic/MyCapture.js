@@ -113,7 +113,7 @@ MyCapture.prototype.startCapture = function() {
 				chrome.tabs.executeScript(tab.id, { code : 'document.getElementById("ntg-recommend").style.display = "none"'});
 				chrome.tabs.executeScript(tab.id, { code : 'document.body.style.position = "fixed"'});
 				chrome.tabs.executeScript(tab.id, { code : 'document.body.style.top = "-77px"'});
-				chrome.tabs.executeScript(tab.id, { code : 'document.body.style.left = "-110px"'});
+				chrome.tabs.executeScript(tab.id, { code : 'document.body.style.left = "-124px"'});
 
 				chrome.windows.get(tab.windowId, function(win) {
 					// 現在のサイズを保存
@@ -125,8 +125,8 @@ MyCapture.prototype.startCapture = function() {
 						width: win.width + 800 - tab.width,
 						height: win.height + 480 - tab.height,
 					}, function() {
-						// 0.05秒遅延させる。
-						chrome.alarms.create('startRecoding', { when : Date.now() + 0.05 * 1000 });
+						// 0.1秒遅延させる。
+						chrome.alarms.create('startRecoding', { when : Date.now() + 0.1 * 1000 });
 					});
 				});
 			});
